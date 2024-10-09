@@ -1,9 +1,6 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
-</p>
 
 ---
-# [Built Portfolio With GitHub ](https://github.com/said7388/github-portfolio)
+# [Built Portfolio With GitHub ]()
 
 ---
 
@@ -17,7 +14,7 @@
 
 ![](./public/image/screen.png)
 
-## View live preview [here](https://abusaid.netlify.app/).
+## View live preview [here]().
 
 ---
 
@@ -109,32 +106,25 @@ NEXT_PUBLIC_RECAPTCHA_SECRET_KEY = # For captcha verification on contact form
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY =
 ```
 
-### Then, Customize data in the `utils/data` [folder](https://github.com/said7388/developer-portfolio/tree/main/utils/data).
+### Then, Customize data in the `utils/data` [folder]().
 
 Eg:
 
 ```javascript
 export const personalData = {
-  name: "ABU SAID",
+  name: "AKSHIT MITTAL",
   profile: "/profile.png",
   designation: "Full-Stack Software Developer",
-  description: "My name is ABU SAID....",
-  email: "abusaid7388@gmail.com",
-  phone: "+8801608797655",
-  address: "Dhaka, Bangladesh",
-  github: "https://github.com/said7388",
-  facebook: "https://www.facebook.com/abusaid.riyaz/",
-  linkedIn: "https://www.linkedin.com/in/abu-said-bd/",
-  twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
+  description: "My name is AKSHIT MITTAL....",
+  email: "akshitmittal20@gmail.com",
+  phone: "+91-9953894030",
+  address: "Rohini, New Delhi, India",
+  github: "https://github.com/akshitmittal20",
+  linkedIn: "https://linkedin.com/in/akshit-mittal-410893162/",
+  leetcode: "https://leetcode.com/akshitmittal20",
   resume: "...",
 };
 ```
-
-`devUsername` Used for fetching blog from `dev.to`.
-
 ---
 
 ---

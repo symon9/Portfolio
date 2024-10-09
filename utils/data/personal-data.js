@@ -1,17 +1,13 @@
 export const personalData = {
-  name: "ABU SAID",
-  profile: '/profile.png',
+  name: "AKSHIT MITTAL",
+  profile: '/portfolioPicNew.png',
   designation: "Software Developer",
-  description: "My name is ABU SAID. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'abusaid7388@gmail.com',
-  phone: '+8801608797655',
-  address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
-  github: 'https://github.com/said7388',
-  facebook: 'https://www.facebook.com/abusaid.riyaz/',
-  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
-  twitter: 'https://twitter.com/said7388',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+  description: "My name is AKSHIT MITTAL. I am a Full-stack software engineer with extensive experience in Web Development, Product Development and Technical Infrastructure Management. Throughout my software engineering journey, I've delved into various technologies and honed my skills in Cloud DevOps technologies to ensure system reliability and efficiency. My interests span across distributed systems and AI, and I'm always keen on exploring emerging technological domains. As a passionate individual with an enthusiastic management style, I believe in fostering energy within teams to achieve company goals. I'm eager to join a company that shares my values and is committed to leading the industry.",
+  email: 'akshitmittal20@gmail.com',
+  phone: '+91-9953894030',
+  address: 'Rohini, Delhi-110086, India',
+  github: 'https://github.com/akshitmittal20',  
+  linkedIn: 'https://linkedin.com/in/akshit-mittal-410893162/',    
+  leetcode: "https://leetcode.com/akshitmittal20",
+  resume: "https://drive.google.com/file/d/1_G-Q5UKuH3b2qxwL2dhRIqDiDQcbjl54/view?usp=sharing"
 }

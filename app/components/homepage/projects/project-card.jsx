@@ -35,6 +35,23 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{`',`}</span>
           </div>
 
+          {/* Link Section */}
+          {project.code && (
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">link:</span>
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400"
+              >
+                {`Link to ${project.name}`}
+              </a>
+              <span className="text-gray-400">,</span>
+            </div>
+          )}
+
+
           <div className="ml-4 lg:ml-8 mr-2">
             <span className=" text-white">tools:</span>
             <span className="text-gray-400">{` ['`}</span>

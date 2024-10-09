@@ -1,45 +1,45 @@
 import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/crefin.jpg';
+import crefin from '/public/image/appPaytm.jpg';
 import realEstate from '/public/image/real-estate.jpg';
 import travel from '/public/image/travel.jpg';
 
 export const projectsData = [
     {
         id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
-        code: '',
+        name: 'Transact-Ease Payment App in MERN',
+        description: "I Developed real-time money transaction app with Node.js, Express, React and MongoDB. Implemented JWT for secure user authentication and Recoil for state management. Utilized React Router DOM for seamless navigation. Transactions were managed securely with Mongo DB transaction sessions ensuring a dynamic and secure user experience. Achieved sleek UI design with Tailwind CSS. GitHub Repo:- https://github.com/akshitmittal20/transact-ease-payment-app.git",
+        tools: ['Express', 'MongoDB', 'NodeJS', 'React', 'Recoil', 'JWT', 'Tailwind CSS'],
+        role: 'Full Stack Developer',
+        code: 'https://payment-app-lyart.vercel.app/Signin',
         demo: '',
         image: crefin,
     },
     {
         id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
+        name: 'Python CPU-Monitoring Web App CI/CD',
+        description: 'I have designed and developed a full-stack web app for CPU Monitoring Web Application in Python using flask module, containerising and setting up the CICD pipeline workflow to deploy image in GCR Google container registry and Google artifact registry on every commit with the updated tag. Tools: Docker, GitHub Actions, Shell Scripting.',
+        tools: ['Python', 'Docker', "GitHub Actions", "Bash", "GCP", "Shell Scripting"],
         role: 'Full Stack Developer',
-        code: '',
+        code: 'https://github.com/akshitmittal20/MonitoringApp_Python.git',
         demo: '',
         image: travel,
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
-        code: '',
+        name: 'Crypto Bridge Web App in MERN',
+        description: 'Bridge is a full-stack application built using the MERN stack, that interacts with the XY Finance API to fetch and display cryptocurrency data. User can - Fetch supported tokens for a specified blockchain, Query XY Finance Quotes API for quotes, Fetch transaction parameters when a user accepts a quote, Fetch supported swap providers for a specified blockchain. Repo- https://github.com/akshitmittal20/XY_Finance_Frontend.git',
+        tools: ['MongoDB', 'Express', 'NodeJS', 'React', 'JWT', 'Redux'],
+        code: 'xy-finance-backend.vercel.app',
         role: 'Full Stack Developer',
         demo: '',
         image: realEstate,
     },
     {
         id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
+        name: 'Java WAR file artifact deployment Automation',
+        description: "Ansible integration with Jenkins CI server, to run and execute playbooks for deploying custom WAR files to a web container and then performing restart for the web container. Services included - Configuring Jenkins server as Ansible provisioning machine, Installing Ansible plugins in Jenkins CI server, Preparing Ansible playbook to run Maven build on Jenkins CI server to Build the .war file, Preparing Ansible playbook to execute deployment steps on the remote web container with restart of the web container post deployment. using Docker for building the image and running the container on tomcat server.",
+        tools: ['Java', 'Ansible', 'Jenkins', 'Terraform', "AWS EC2", 'Docker', 'YAML'],
+        code: 'https://github.com/akshitmittal20/CICD_JavaApplicationDeployment_Ansible_Docker_Jenkins.git',
         demo: '',
         image: ayla,
         role: 'Full Stack Developer',

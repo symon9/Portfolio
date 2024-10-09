@@ -43,6 +43,11 @@ import memsql from '/public/svg/skills/memsql.svg';
 import microsoftoffice from '/public/svg/skills/microsoftoffice.svg';
 import mongoDB from '/public/svg/skills/mongoDB.svg';
 import mysql from '/public/svg/skills/mysql.svg';
+import kubernetes from '/public/svg/skills/kubernetes.svg';
+import ansible from '/public/svg/skills/ansible.svg';
+import jenkins from '/public/svg/skills/jenkins.svg';
+import nodejs from '/public/svg/skills/nodejs.svg';
+
 import nextJS from '/public/svg/skills/nextJS.svg';
 import nginx from '/public/svg/skills/nginx.svg';
 import numpy from '/public/svg/skills/numpy.svg';
@@ -225,6 +230,16 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case 'canva':
       return canva;
+      case 'kubernetes':
+      return kubernetes;
+      case 'jenkins':
+      return jenkins;
+      case 'ansible':
+      return ansible;
+      case 'ansible':
+      return ansible;
+      case 'nodejs':
+      return nodejs;
     default:
       break;
   }
