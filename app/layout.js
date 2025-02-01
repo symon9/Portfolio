@@ -10,9 +10,9 @@ import ScrollToTop from "./components/helper/scroll-to-top";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Akshit Mittal - Software Engineer",
+  title: "Portfolio of Simon Emmanuel - Frontend Software Engineer",
   description:
-    "This is the portfolio of Akshit Mittal. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "This is the portfolio of Simon Emmanuel. a passionate Frontend Software Engineer with expertise in React, Next.js, TypeScript, and Node.js ⚡. I specialize in building modern, high-performance web applications with a strong focus on scalability and user experience 🎨💡. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
 };
 
 export default function RootLayout({ children }) {
