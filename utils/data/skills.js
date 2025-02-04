@@ -8,17 +8,7 @@ export const skillsData = [
   'Tailwind',
   'MongoDB',
   'MySQL',
-  'PostgreSQL',
   'Git',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'Jenkins',
-  'Ansible',
-  'Go',
-  'Java',
-  'Figma',
-  'MaterialUI',
   'nodejs'
 ]
 

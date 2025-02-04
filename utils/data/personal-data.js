@@ -1,13 +1,13 @@
 export const personalData = {
-  name: "AKSHIT MITTAL",
-  profile: '/portfolioPicNew.png',
-  designation: "Software Developer",
-  description: "My name is AKSHIT MITTAL. I am a Full-stack software engineer with extensive experience in Web Development, Product Development and Technical Infrastructure Management. Throughout my software engineering journey, I've delved into various technologies and honed my skills in Cloud DevOps technologies to ensure system reliability and efficiency. My interests span across distributed systems and AI, and I'm always keen on exploring emerging technological domains. As a passionate individual with an enthusiastic management style, I believe in fostering energy within teams to achieve company goals. I'm eager to join a company that shares my values and is committed to leading the industry.",
-  email: 'akshitmittal20@gmail.com',
-  phone: '+91-9953894030',
-  address: 'Rohini, Delhi-110086, India',
-  github: 'https://github.com/akshitmittal20',  
-  linkedIn: 'https://linkedin.com/in/akshit-mittal-410893162/',    
-  leetcode: "https://leetcode.com/akshitmittal20",
-  resume: "https://drive.google.com/file/d/1n3v9G58rVLfZlC0iI4Y3G0aUlTgBevQG/view?usp=sharing"
-}
+  name: "SIMON EMMANUEL",
+  profile: "/profile.jpg",
+  designation: "Frontend Software Engineer",
+  description:
+    "I’m Simon Emmanuel, a passionate Frontend Software Engineer with expertise in React, Next.js, Node.js, TypeScript, and Supabase ⚡. I specialize in building modern, high-performance web applications with a strong focus on scalability and user experience 🎨💡. Beyond web development, I have a keen interest in project management, digital marketing, and product research, allowing me to bridge the gap between technology and business growth 📈🌍. I thrive in collaborative environments 🤝 and enjoy working with innovative teams to build solutions that make an impact. Whether it’s designing sleek UIs with Tailwind CSS, ChakraUI 🎨, managing backend logic with Express & MongoDB 🛠️, or exploring AI-driven automation 🤖, I’m always eager to learn, grow, and take on new challenges. Let’s connect and build something amazing together! 🚀🔥",
+  email: "simon.dev.me@gmail.com",
+  phone: "+2349050010200",
+  address: "Kano, Nigeria",
+  github: "https://github.com/symon9",
+  linkedIn: "https://linkedin.com/in/simon-emmanuel",
+  resume: "https://tinyurl.com/simon-resume",
+};
