@@ -23,10 +23,10 @@ function HeroSection() {
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
-            Hello, <br />
+            Hello 👋, <br />
             This is {' '}
             <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a Full Stack `}
+            {` , I'm a `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>
             .
           </h1>
@@ -53,13 +53,13 @@ function HeroSection() {
             >
               <FaFacebook size={30} />
             </Link> */}
-            <Link
+            {/* <Link
               href={personalData.leetcode}
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <SiLeetcode size={30} />
-            </Link>
+            </Link> */}
             {/* <Link
               href={personalData.twitter}
               target='_blank'
@@ -108,19 +108,21 @@ function HeroSection() {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Akshit Mittal</span>
+                <span className="text-amber-300">Simon Emmanuel</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className=" text-white">skills:</span>
                 <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">NodeJS</span>
-                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">React</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">NextJS</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
+                <span className="text-amber-300">Zustand</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Redux Toolkit</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">NodeJS</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Express</span>
                 <span className="text-gray-400">{"', '"}</span>
@@ -130,12 +132,14 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MongoDB</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
+                <span className="text-amber-300">TailwindCSS</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"'],"}</span>
-                <span className="text-amber-300">Jenkins</span>
+                <span className="text-amber-300">RadixUI</span>
                 <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">ChakraUI</span>
+                <span className="text-gray-400">{"', "}</span>
+                <span className="text-amber-300">Git &amp; GitHub</span>
+                <span className="text-gray-400">{"' ], "}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>

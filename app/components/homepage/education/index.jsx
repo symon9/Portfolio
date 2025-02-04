@@ -68,6 +68,7 @@ function Education() {
                             {education.title}
                           </p>
                           <p className="text-sm sm:text-base">{education.institution}</p>
+                          <p className="text-sm sm:text-base text-pink-500">{education.course}</p>
                         </div>
                       </div>
                     </div>
