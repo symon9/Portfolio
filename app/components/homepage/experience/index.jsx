@@ -54,17 +54,24 @@ function Experience() {
                           {experience.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
+                      <div className="flex  gap-x-8 px-3 py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                          <p className="text-base sm:text-xl mb-2 font-medium ">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-pink-500">
                             {experience.company}
                           </p>
+                      <div className="mt-3">
+                        <ul className="list-disc">
+                          {experience.descriptions.map((description, i) => (
+                            <li className="mb-3" key={i}>{description}</li>
+                          ))}
+                        </ul>
+                      </div>
                         </div>
                       </div>
                     </div>
