@@ -1,51 +1,54 @@
-import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/appPaytm.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
+import drawFusion from "/public/image/drawFusion.png";
+import gameHub from "/public/image/gameHub.png";
+import exploreWildOasis from "/public/image/exploreWildOasis.png";
+import baseBank from "/public/image/baseBank.png";
 
 export const projectsData = [
-    {
-        id: 1,
-        name: 'Transact-Ease Payment App in MERN',
-        description: "I Developed real-time money transaction app with Node.js, Express, React and MongoDB. Implemented JWT for secure user authentication and Recoil for state management. Utilized React Router DOM for seamless navigation. Transactions were managed securely with Mongo DB transaction sessions ensuring a dynamic and secure user experience. Achieved sleek UI design with Tailwind CSS. GitHub Repo:- https://github.com/akshitmittal20/transact-ease-payment-app.git",
-        tools: ['Express', 'MongoDB', 'NodeJS', 'React', 'Recoil', 'JWT', 'Tailwind CSS'],
-        role: 'Full Stack Developer',
-        code: 'https://payment-app-lyart.vercel.app/Signin',
-        demo: '',
-        image: crefin,
-    },
-    {
-        id: 2,
-        name: 'Python CPU-Monitoring Web App CI/CD',
-        description: 'I have designed and developed a full-stack web app for CPU Monitoring Web Application in Python using flask module, containerising and setting up the CICD pipeline workflow to deploy image in GCR Google container registry and Google artifact registry on every commit with the updated tag. Tools: Docker, GitHub Actions, Shell Scripting.',
-        tools: ['Python', 'Docker', "GitHub Actions", "Bash", "GCP", "Shell Scripting"],
-        role: 'Full Stack Developer',
-        code: 'https://github.com/akshitmittal20/MonitoringApp_Python.git',
-        demo: '',
-        image: travel,
-    },
-    {
-        id: 3,
-        name: 'Crypto Bridge Web App in MERN',
-        description: 'Bridge is a full-stack application built using the MERN stack, that interacts with the XY Finance API to fetch and display cryptocurrency data. User can - Fetch supported tokens for a specified blockchain, Query XY Finance Quotes API for quotes, Fetch transaction parameters when a user accepts a quote, Fetch supported swap providers for a specified blockchain. Repo- https://github.com/akshitmittal20/XY_Finance_Frontend.git',
-        tools: ['MongoDB', 'Express', 'NodeJS', 'React', 'JWT', 'Redux'],
-        code: 'xy-finance-backend.vercel.app',
-        role: 'Full Stack Developer',
-        demo: '',
-        image: realEstate,
-    },
-    {
-        id: 4,
-        name: 'Java WAR file artifact deployment Automation',
-        description: "Ansible integration with Jenkins CI server, to run and execute playbooks for deploying custom WAR files to a web container and then performing restart for the web container. Services included - Configuring Jenkins server as Ansible provisioning machine, Installing Ansible plugins in Jenkins CI server, Preparing Ansible playbook to run Maven build on Jenkins CI server to Build the .war file, Preparing Ansible playbook to execute deployment steps on the remote web container with restart of the web container post deployment. using Docker for building the image and running the container on tomcat server.",
-        tools: ['Java', 'Ansible', 'Jenkins', 'Terraform', "AWS EC2", 'Docker', 'YAML'],
-        code: 'https://github.com/akshitmittal20/CICD_JavaApplicationDeployment_Ansible_Docker_Jenkins.git',
-        demo: '',
-        image: ayla,
-        role: 'Full Stack Developer',
-    }
+  {
+    id: 1,
+    name: "DrawFusion: Drawing App",
+    description:
+      "DrawFusion is a drawing application that lets users create an account 📝, log in 🔑, edit their profile 🖊️, and draw effortlessly 🖌️ using powerful tools. With a sleek landing page 🌟 and a fully responsive design 📱💻, it works seamlessly on both mobile and large screens. Users can sketch, design, and download their artwork 📥, making it perfect for artists, and designers.🚀🔥",
+    tools: ["React", "Supabase", "Tailwind", "Konvajs"],
+    role: "Frontend Developer",
+    code: "",
+    demo: "https://drawfusion.vercel.app",
+    image: drawFusion,
+  },
+  {
+    id: 2,
+    name: "Game Hub: Discover & Enjoy the Games",
+    description:
+      "Game Hub is a dynamic gaming platform where users can explore a wide selection of games, filter by genre, search for favorites, and view detailed game information. It also features light and dark mode 🌞🌙 for a customized experience. With a sleek and fully responsive design 📱💻, it offers an engaging experience for gamers on all devices. Dive into the world of gaming 🚀👾",
+    tools: ["React", "Typescript", "ChakraUI"],
+    code: "",
+    demo: "https://game-hub-puce-rho.vercel.app",
+    image: gameHub,
+    role: "Frontend Developer",
+  },
+  {
+    id: 3,
+    name: "Explore Wild Oasis: Gateway to Nature",
+    description:
+      "Explore Wild Oasis is a travel and adventure platform that allows users to view cabins 🏕️, sign in with Google 🔑, make reservations 🏡, edit guest profile info 🖊️, and update reservation details 📅 for a seamless booking experience. Discover unique stays and plan your next getaway. 🚀🌍.",
+    tools: ["Next JS", "Supabase", "Tailwind"],
+    role: "Frontend Developer",
+    code: "",
+    demo: "https://explore-wild-oasis.vercel.app",
+    image: exploreWildOasis,
+  },
+  {
+    id: 4,
+    name: "BaseBank: Modern Banking Made Simple",
+    description:
+      "BaseBank is a sleek and modern landing page for a banking platform, designed to showcase financial services with a clean and professional look. With a fully responsive design 📱💻, it provides a seamless experience across all devices. Explore it. 🚀💳",
+    tools: ["React", "Tailwind"],
+    code: "",
+    role: "Frontend Developer",
+    demo: "https://basebank.netlify.app",
+    image: baseBank,
+  },
 ];
-
 
 // Do not remove any property.
 // Leave it blank instead as shown below
