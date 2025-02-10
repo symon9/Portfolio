@@ -68,7 +68,7 @@ function Experience() {
                       <div className="mt-3">
                         <ul className="list-disc">
                           {experience.descriptions.map((description, i) => (
-                            <li className="mb-3" key={i}>{description}</li>
+                            <li className="mb-3 text-xs md:text-sm" key={i}>{description}</li>
                           ))}
                         </ul>
                       </div>
