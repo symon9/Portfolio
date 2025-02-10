@@ -9,7 +9,14 @@ export const skillsData = [
   'MongoDB',
   'MySQL',
   'Git',
-  'nodejs'
+  'nodejs',
+  'styledcomponents',
+  'supabase',
+  'chakraui',
+  'radixui',
+  'express',
+  'Prisma',
+  'recharts',
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
@@ -97,4 +104,13 @@ export const skillsData = [
   Tensorflow
   Webex
   Wordpress
+
+  styledcomponents
+  supabase
+  chakraui
+  radixui
+  express
+  prisma
+  recharts
+  stripe
 */
