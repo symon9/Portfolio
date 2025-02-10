@@ -1,9 +1,7 @@
 "use client"
-import { useEffect } from 'react';
 
-const GlowCard = ({ children , identifier}) => {
-  
-
+const GlowCard = ({ children , identifier}) => {  
+conmsole.log(identifier)
   return (
     <div className={` glow-container`}>
       <article className={`glow-card  h-fit cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent w-full`}>
