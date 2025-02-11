@@ -11,19 +11,19 @@ function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
   const [userInput, setUserInput] = useState({
     name: '',
-    email: '',
+    user_email: '',
     message: '',
   });
 
   const checkRequired = () => {
-    if (userInput.email && userInput.message && userInput.name) {
+    if (userInput.user_email && userInput.message && userInput.name) {
       setError({ ...error, required: false });
     }
   };
 
   const handleSendMail = async (e) => {
     e.preventDefault();
-    if (!userInput.email || !userInput.message || !userInput.name) {
+    if (!userInput.user_email || !userInput.message || !userInput.name) {
       setError({ ...error, required: true });
       return;
     } else if (error.email) {
@@ -44,7 +44,7 @@ function ContactWithoutCaptcha() {
         toast.success('Message sent successfully!');
         setUserInput({
           name: '',
-          email: '',
+          user_email: '',
           message: '',
         });
       };
@@ -84,10 +84,10 @@ function ContactWithoutCaptcha() {
               maxLength="100"
               required={true}
               value={userInput.email}
-              onChange={(e) => setUserInput({ ...userInput, email: e.target.value })}
+              onChange={(e) => setUserInput({ ...userInput, user_email: e.target.value })}
               onBlur={() => {
                 checkRequired();
-                setError({ ...error, email: !isValidEmail(userInput.email) });
+                setError({ ...error, email: !isValidEmail(userInput.user_email) });
               }}
             />
             {error.email &&
