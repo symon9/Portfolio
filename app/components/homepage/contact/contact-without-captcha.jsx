@@ -26,7 +26,7 @@ function ContactWithoutCaptcha() {
     if (!userInput.user_email || !userInput.message || !userInput.name) {
       setError({ ...error, required: true });
       return;
-    } else if (error.email) {
+    } else if (error.user_email) {
       return;
     } else {
       setError({ ...error, required: false });
@@ -83,14 +83,14 @@ function ContactWithoutCaptcha() {
               type="email"
               maxLength="100"
               required={true}
-              value={userInput.email}
+              value={userInput.user_email}
               onChange={(e) => setUserInput({ ...userInput, user_email: e.target.value })}
               onBlur={() => {
                 checkRequired();
                 setError({ ...error, email: !isValidEmail(userInput.user_email) });
               }}
             />
-            {error.email &&
+            {error.user_email &&
               <p className="text-sm text-red-400">Please provide a valid email!</p>
             }
           </div>
