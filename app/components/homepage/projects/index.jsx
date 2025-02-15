@@ -17,12 +17,12 @@ const Projects = () => {
 
       <div className="pt-24">
         <div className="flex flex-col gap-6 md:flex-row md:flex-wrap">
-          {projectsData.slice(0, 4).map((project, index) => (
+          {projectsData.slice(0, 6).map((project, index) => (
             <div
               key={index}
               className="sticky-card w-full mx-auto max-w-md sticky md:w-1/2"
             >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s] min-h-[280px] bg-[linear-gradient(90deg,#281e57_0%,#201435_100%)] rounded-lg border border-[#1a1443]">
+              <div className="box-border flex justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s] md:min-h-[503px] bg-[linear-gradient(90deg,#281e57_0%,#201435_100%)] rounded-lg border border-[#1a1443]">
                 <SingleCard project={project} />
               </div>
             </div>

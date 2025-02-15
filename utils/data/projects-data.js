@@ -29,9 +29,9 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "The Wild Oasis: Modern Hotel Management Solution",
+    name: "The Wild Oasis: Modern Hotel Management",
     description:
-      "The Wild Oasis 🏨✨ is a hotel management application designed to simplify booking and management processes. It features a dashboard 📊 for viewing bookings, sales charts, check-ins, and occupancy rates, along with cabin management 🏕️, user settings ⚙️, and detailed reports 📅. The platform supports dark mode 🌙 for better user experience and provides secure authentication 🔐 to ensure data safety. 🚀🏡",
+      "The Wild Oasis is a hotel management application designed to simplify booking and management processes. It features a dashboard 📊 for viewing bookings, sales charts, check-ins, and occupancy rates, along with cabin management 🏕️, user settings ⚙️, and detailed reports 📅. The platform supports dark mode 🌙 for better user experience and provides secure authentication 🔐 to ensure data safety. 🚀🏡",
     tools: ["React", "styledcomponents", "recharts", "supabase"],
     code: "",
     demo: "https://the-wild-oasis-ht.vercel.app",
