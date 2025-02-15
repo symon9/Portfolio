@@ -2,6 +2,7 @@ import drawFusion from "/public/image/drawFusion.png";
 import gameHub from "/public/image/gameHub.png";
 import exploreWildOasis from "/public/image/exploreWildOasis.png";
 import baseBank from "/public/image/baseBank.png";
+import wildOasisDashboard from "/public/image/dashboard-light.png"
 
 export const projectsData = [
   {
@@ -28,6 +29,17 @@ export const projectsData = [
   },
   {
     id: 3,
+    name: "The Wild Oasis: Modern Hotel Management Solution",
+    description:
+      "The Wild Oasis 🏨✨ is a hotel management application designed to simplify booking and management processes. It features a dashboard 📊 for viewing bookings, sales charts, check-ins, and occupancy rates, along with cabin management 🏕️, user settings ⚙️, and detailed reports 📅. The platform supports dark mode 🌙 for better user experience and provides secure authentication 🔐 to ensure data safety. 🚀🏡",
+    tools: ["React", "styledcomponents", "recharts", "supabase"],
+    code: "",
+    demo: "https://the-wild-oasis-ht.vercel.app",
+    image: wildOasisDashboard,
+    role: "Frontend Developer",
+  },
+  {
+    id: 4,
     name: "Explore Wild Oasis: Gateway to Nature",
     description:
       "Explore Wild Oasis is a travel and adventure platform that allows users to view cabins 🏕️, sign in with Google 🔑, make reservations 🏡, edit guest profile info 🖊️, and update reservation details 📅 for a seamless booking experience. Discover unique stays and plan your next getaway. 🚀🌍.",
@@ -38,7 +50,7 @@ export const projectsData = [
     image: exploreWildOasis,
   },
   {
-    id: 4,
+    id: 5,
     name: "BaseBank: Modern Banking Made Simple",
     description:
       "BaseBank is a sleek and modern landing page for a banking platform, designed to showcase financial services with a clean and professional look. With a fully responsive design 📱💻, it provides a seamless experience across all devices. Explore it. 🚀💳",
