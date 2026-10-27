@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projectsData } from "@/utils/data/projects-data";
@@ -17,6 +17,26 @@ const CATEGORIES = [
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedImages, setSelectedImages] = useState({});
+
+  useEffect(() => {
+    const multiImageProjects = projectsData.filter(
+      (p) => p.images && p.images.length > 1
+    );
+    if (multiImageProjects.length === 0) return;
+
+    const timer = setInterval(() => {
+      setSelectedImages((prev) => {
+        const next = { ...prev };
+        multiImageProjects.forEach((p) => {
+          const currentIdx = next[p.id] ?? 0;
+          next[p.id] = (currentIdx + 1) % p.images.length;
+        });
+        return next;
+      });
+    }, 3800);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const filteredProjects =
     activeCategory === "all"
@@ -78,34 +98,66 @@ export default function Projects() {
                         const currentSrc = project.images ? project.images[activeIdx] || project.images[0] : project.image;
                         return (
                           <>
-                            <Image
-                              src={currentSrc}
-                              alt={`${project.name} preview ${activeIdx + 1}`}
-                              width={900}
-                              height={550}
-                              unoptimized={currentSrc?.endsWith(".gif")}
-                              className="w-full h-auto object-cover rounded-xl border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                              priority={project.id === "codemind-ai"}
-                            />
+                            {project.images && project.images.length > 1 ? (
+                              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-2xl">
+                                {project.images.map((imgSrc, idx) => {
+                                  const isActive = activeIdx === idx;
+                                  return (
+                                    <Image
+                                      key={imgSrc}
+                                      src={imgSrc}
+                                      alt={`${project.name} preview ${idx + 1}`}
+                                      fill
+                                      sizes="(max-width: 1024px) 100vw, 50vw"
+                                      className={`object-cover object-top transition-all duration-700 ease-in-out ${
+                                        isActive
+                                          ? "opacity-100 scale-100 z-10"
+                                          : "opacity-0 scale-[1.02] pointer-events-none z-0"
+                                      }`}
+                                      priority={idx === 0}
+                                    />
+                                  );
+                                })}
+                              </div>
+                            ) : (
+                              <Image
+                                src={currentSrc}
+                                alt={project.name}
+                                width={900}
+                                height={550}
+                                unoptimized={currentSrc?.endsWith(".gif")}
+                                className="w-full h-auto object-cover rounded-xl border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                                priority={project.id === "codemind-ai"}
+                              />
+                            )}
+
                             {project.images && project.images.length > 1 && (
-                              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 p-1 rounded-full bg-slate-950/80 dark:bg-black/80 backdrop-blur-md border border-white/15 shadow-xl z-10">
-                                {project.images.map((img, idx) => (
-                                  <button
-                                    key={img}
-                                    type="button"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setSelectedImages((prev) => ({ ...prev, [project.id]: idx }));
-                                    }}
-                                    className={`text-[11px] font-mono px-3 py-1 rounded-full transition-all ${
-                                      activeIdx === idx
-                                        ? "bg-indigo-600 text-white font-semibold shadow-sm"
-                                        : "text-slate-300 hover:text-white hover:bg-white/10"
-                                    }`}
-                                  >
-                                    Screen {idx + 1}
-                                  </button>
-                                ))}
+                              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 p-1 rounded-full bg-white/90 dark:bg-[#0c0e17]/90 backdrop-blur-md border border-slate-300/80 dark:border-white/15 shadow-lg dark:shadow-2xl z-20">
+                                {project.images.map((img, idx) => {
+                                  const isCurrent = activeIdx === idx;
+                                  return (
+                                    <button
+                                      key={img}
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedImages((prev) => ({ ...prev, [project.id]: idx }));
+                                      }}
+                                      className={`text-[11px] font-mono px-3 py-1 rounded-full transition-all flex items-center gap-1.5 ${
+                                        isCurrent
+                                          ? "bg-indigo-600 text-white font-semibold shadow-sm"
+                                          : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/70 dark:hover:bg-white/10"
+                                      }`}
+                                    >
+                                      <span
+                                        className={`w-1.5 h-1.5 rounded-full ${
+                                          isCurrent ? "bg-white animate-pulse" : "bg-slate-400 dark:bg-slate-500"
+                                        }`}
+                                      />
+                                      <span>Screen {idx + 1}</span>
+                                    </button>
+                                  );
+                                })}
                               </div>
                             )}
                           </>
