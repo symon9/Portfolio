@@ -11,21 +11,30 @@ export const metadata = {
     "Simon Emmanuel is a Software Engineer based in Kano, Nigeria. Building full-stack web applications, AI-powered developer tools, and thoughtful digital products from idea to production.",
   keywords: [
     "Simon Emmanuel",
+    "symon9",
     "Software Engineer",
     "Full-Stack Developer",
-    "React",
-    "Next.js",
-    "TypeScript",
+    "Full-Stack Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
     "Node.js",
     "NestJS",
+    "Electron Developer",
     "AI Developer Tools",
     "CodeMind AI",
-    "CommitCraft",
+    "CommitCraft Pro",
     "MOMI Bump",
     "Nigeria Software Engineer",
+    "Kano Software Engineer",
+    "Remote Software Engineer",
+    "Open Source Developer",
   ],
   authors: [{ name: "Simon Emmanuel", url: "https://github.com/symon9" }],
   creator: "Simon Emmanuel",
+  publisher: "Simon Emmanuel",
+  category: "technology",
+  classification: "Portfolio",
   metadataBase: new URL("https://iamsimon.netlify.app"),
   alternates: {
     canonical: "/",
@@ -37,7 +46,7 @@ export const metadata = {
     url: "https://iamsimon.netlify.app",
     siteName: "Simon Emmanuel Portfolio",
     locale: "en_US",
-    type: "website",
+    type: "profile",
     images: [
       {
         url: "/profile.jpg",
@@ -72,10 +81,67 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://iamsimon.netlify.app/#person",
+      name: "Simon Emmanuel",
+      alternateName: "symon9",
+      url: "https://iamsimon.netlify.app",
+      image: "https://iamsimon.netlify.app/profile.jpg",
+      jobTitle: "Software Engineer",
+      description:
+        "Full-stack software engineer building web applications, mobile experiences, AI-powered developer tools, and digital products from idea to production.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kano",
+        addressCountry: "NG",
+      },
+      sameAs: [
+        "https://github.com/symon9",
+        "https://linkedin.com/in/simon-emmanuel",
+        "https://open-vsx.org/namespace/symon9",
+      ],
+      knowsAbout: [
+        "Software Engineering",
+        "Full-Stack Web Development",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "NestJS",
+        "Electron",
+        "AI Developer Tools",
+        "PostgreSQL",
+        "Prisma",
+        "Cloud Infrastructure",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://iamsimon.netlify.app/#website",
+      url: "https://iamsimon.netlify.app",
+      name: "Simon Emmanuel - Software Engineer Portfolio",
+      description:
+        "Portfolio of Simon Emmanuel, Software Engineer specializing in full-stack web applications, AI-powered developer tools, and digital products.",
+      publisher: {
+        "@id": "https://iamsimon.netlify.app/#person",
+      },
+      inLanguage: "en-US",
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
