@@ -16,6 +16,7 @@ const CATEGORIES = [
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [selectedImages, setSelectedImages] = useState({});
 
   const filteredProjects =
     activeCategory === "all"
@@ -72,15 +73,44 @@ export default function Projects() {
                   {/* Left Column: Image Preview */}
                   <div className="lg:col-span-6 relative bg-slate-100 dark:bg-slate-950 flex flex-col justify-center overflow-hidden min-h-[300px] lg:min-h-[440px] border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-white/10">
                     <div className="relative w-full h-full min-h-[300px] lg:min-h-[440px] flex items-center justify-center p-4 sm:p-6">
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        width={900}
-                        height={550}
-                        unoptimized={project.image?.endsWith(".gif")}
-                        className="w-full h-auto object-cover rounded-xl border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                        priority={project.id === "codemind-ai"}
-                      />
+                      {(() => {
+                        const activeIdx = selectedImages[project.id] ?? 0;
+                        const currentSrc = project.images ? project.images[activeIdx] || project.images[0] : project.image;
+                        return (
+                          <>
+                            <Image
+                              src={currentSrc}
+                              alt={`${project.name} preview ${activeIdx + 1}`}
+                              width={900}
+                              height={550}
+                              unoptimized={currentSrc?.endsWith(".gif")}
+                              className="w-full h-auto object-cover rounded-xl border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                              priority={project.id === "codemind-ai"}
+                            />
+                            {project.images && project.images.length > 1 && (
+                              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 p-1 rounded-full bg-slate-950/80 dark:bg-black/80 backdrop-blur-md border border-white/15 shadow-xl z-10">
+                                {project.images.map((img, idx) => (
+                                  <button
+                                    key={img}
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedImages((prev) => ({ ...prev, [project.id]: idx }));
+                                    }}
+                                    className={`text-[11px] font-mono px-3 py-1 rounded-full transition-all ${
+                                      activeIdx === idx
+                                        ? "bg-indigo-600 text-white font-semibold shadow-sm"
+                                        : "text-slate-300 hover:text-white hover:bg-white/10"
+                                    }`}
+                                  >
+                                    Screen {idx + 1}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
                   </div>
 
