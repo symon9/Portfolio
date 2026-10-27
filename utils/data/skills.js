@@ -1,116 +1,85 @@
-export const skillsData = [
-  'HTML',
-  'CSS',
-  'Javascript',
-  'Typescript',
-  'React',
-  'Next JS',
-  'Tailwind',
-  'MongoDB',
-  'MySQL',
-  'Git',
-  'nodejs',
-  'styledcomponents',
-  'supabase',
-  'chakraui',
-  'radixui',
-  'express',
-  'Prisma',
-  'recharts',
-]
-
-// Choose your skills from below. Make sure it's in the same format and spelled correctly.
-// Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-
-
-// AVAILABLE SKILLS
-
-/* 
-  HTML
-  CSS
-  JS 
-  React
-  Next JS
-  Nuxt JS
-  Node JS
-  Vue
-  Angular
-  Docker
-  Photoshop
-  Illustrator
-  Svelte
-  GCP
-  Azure
-  Fastify
-  Haxe
-  Ionic
-  Markdown
-  Microsoft Office
-  Picsart
-  Sketch
-  Unity
-  WolframAlpha
-  Adobe XD
-  After Effects
-  Bootstrap
-  Bulma
-  CapacitorJs
-  Coffeescript
-  MemSQL
-  C
-  C++
-  C#
-  Python
-  Java
-  Julia
-  Matlab
-  Swift
-  Ruby
-  Kotlin
-  Go
-  PHP
-  Flutter
-  Dart
-  Typescript
-  Swift
-  Git
-  Figma
-  Canva
-  Ubuntu
-  Bootstrap
-  MongoDB
-  Tailwind
-  ViteJS
-  VuetifyJS
-  MySQL
-  PostgreSQL
-  AWS
-  Firebase
-  Blender
-  Premiere Pro
-  Adobe Audition
-  Deno
-  Django
-  Gimp
-  Graphql
-  Lightroom
-  MaterialUI
-  Nginx
-  Numpy
-  OpenCV
-  Pytorch
-  Selenium
-  Strapi
-  Tensorflow
-  Webex
-  Wordpress
-
-  styledcomponents
-  supabase
-  chakraui
-  radixui
-  express
-  prisma
-  recharts
-  stripe
-*/
+export const skillCategories = [
+  {
+    title: "Frontend Engineering",
+    description: "Building accessible, high-performance user interfaces and responsive web applications.",
+    skills: [
+      { name: "React", level: "Production Core" },
+      { name: "Next.js", level: "Production Core" },
+      { name: "TypeScript", level: "Production Core" },
+      { name: "JavaScript (ES6+)", level: "Production Core" },
+      { name: "Tailwind CSS", level: "Production Core" },
+      { name: "Zustand", level: "State Management" },
+      { name: "Redux Toolkit", level: "State Management" },
+      { name: "TanStack Query", level: "Data Fetching" },
+      { name: "HTML5 / Semantic Web", level: "Standards" },
+      { name: "CSS3 / Sass", level: "Styling" },
+    ],
+  },
+  {
+    title: "Backend & Systems",
+    description: "Designing RESTful APIs, server architectures, and scalable data layers.",
+    skills: [
+      { name: "Node.js", level: "Production Core" },
+      { name: "Express.js", level: "Production Core" },
+      { name: "NestJS", level: "Enterprise Architecture" },
+      { name: "REST APIs", level: "API Design" },
+      { name: "Prisma ORM", level: "Data Access" },
+      { name: "WebSockets", level: "Realtime Systems" },
+      { name: "Authentication (JWT/OAuth)", level: "Security" },
+    ],
+  },
+  {
+    title: "AI & Developer Tooling",
+    description: "Integrating LLMs, building editor extensions, and automating developer workflows.",
+    skills: [
+      { name: "LLM API Integration", level: "Specialized" },
+      { name: "VS Code Extension API", level: "Specialized" },
+      { name: "Electron", level: "Desktop Apps" },
+      { name: "Monaco Editor", level: "IDE Core" },
+      { name: "Git AST & Diff Parsing", level: "Tooling" },
+      { name: "Prompt Engineering", level: "AI Workflows" },
+    ],
+  },
+  {
+    title: "Databases & Storage",
+    description: "Modeling schemas, relational queries, and distributed object storage.",
+    skills: [
+      { name: "PostgreSQL", level: "Relational DB" },
+      { name: "MySQL", level: "Relational DB" },
+      { name: "MongoDB", level: "NoSQL DB" },
+      { name: "Supabase", level: "Backend-as-a-Service" },
+      { name: "Cloudflare R2", level: "Object Storage" },
+    ],
+  },
+  {
+    title: "Mobile Development",
+    description: "Cross-platform mobile applications for iOS and Android.",
+    skills: [
+      { name: "React Native", level: "Mobile Framework" },
+      { name: "Expo", level: "App Tooling" },
+      { name: "Mobile UI Design", level: "Interface" },
+    ],
+  },
+  {
+    title: "Infrastructure & DevOps",
+    description: "Containerization, cloud fundamentals, and continuous integration.",
+    skills: [
+      { name: "Docker", level: "Containerization" },
+      { name: "Terraform", level: "Fundamentals / IaC" },
+      { name: "AWS Fundamentals", level: "Cloud Core" },
+      { name: "Video Streaming Delivery", level: "Media Infra" },
+      { name: "CI / CD Pipelines", level: "Automation" },
+    ],
+  },
+  {
+    title: "Workflow & Engineering Practices",
+    description: "Standard practices for shipping reliable software with collaborative teams.",
+    skills: [
+      { name: "Git & GitHub", level: "Version Control" },
+      { name: "Conventional Commits", level: "Standards" },
+      { name: "Agile / Scrum", level: "Delivery" },
+      { name: "Code Review & Testing", level: "Quality" },
+      { name: "System Design", level: "Architecture" },
+    ],
+  },
+];
