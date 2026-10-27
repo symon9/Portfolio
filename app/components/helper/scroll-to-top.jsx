@@ -1,36 +1,32 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa6";
+import { FiArrowUp } from "react-icons/fi";
 
-const DEFAULT_BTN_CLS =
-  "fixed bottom-8 right-6 z-50 flex items-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 p-4 hover:text-xl transition-all duration-300 ease-out";
-const SCROLL_THRESHOLD = 50;
-
-const ScrollToTop = () => {
-  const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS);
+export default function ScrollToTop() {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        setBtnCls(DEFAULT_BTN_CLS.replace(" hidden", ""));
-      } else {
-        setBtnCls(DEFAULT_BTN_CLS + " hidden");
-      }
+      setIsVisible(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll, { passive: true });
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const onClickBtn = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  if (!isVisible) return null;
 
   return (
-    <button className={btnCls} onClick={onClickBtn}>
-      <FaArrowUp />
+    <button
+      onClick={scrollToTop}
+      aria-label="Scroll to top of page"
+      className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-white dark:bg-surface-card border border-slate-300 dark:border-white/15 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:border-indigo-600 dark:hover:border-indigo-500 shadow-xl shadow-slate-300/50 dark:shadow-black/40 backdrop-blur-md transition-all duration-200 group focus:outline-none"
+    >
+      <FiArrowUp size={18} className="group-hover:-translate-y-0.5 transition-transform" />
     </button>
   );
-};
-
-export default ScrollToTop;
+}
