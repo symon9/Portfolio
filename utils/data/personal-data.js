@@ -39,6 +39,6 @@ export const personalData = {
   availability: "Open to remote engineering roles, freelance contracts & ambitious startup collaborations",
   github: "https://github.com/symon9",
   linkedIn: "https://linkedin.com/in/simon-emmanuel",
-  resume: "https://tinyurl.com/simon-resume",
+  resume: "https://drive.google.com/file/d/1-deaC5aX0YdJhUQUvpBiVz-je4DBpXSe/view?usp=sharing",
   domain: "https://iamsimon.netlify.app",
 };
