@@ -24,7 +24,7 @@ export const projectsData = [
     name: "CommitCraft Pro",
     tagline: "AI-Powered Git Workflow & Conventional Commits",
     category: "ai-tools",
-    badge: "3.9k+ Installs · VS Code & Open VSX",
+    badge: "4k+ Installs · VS Code & Open VSX",
     description:
       "Generate commit messages, branch names, and next-step suggestions from your Git diff using Gemini. A developer productivity extension published on Open VSX and VS Code.",
     problem:

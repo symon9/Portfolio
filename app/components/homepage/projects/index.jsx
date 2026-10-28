@@ -58,7 +58,7 @@ export default function Projects() {
             Engineered for impact &amp; performance.
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
-            From open-source AI developer tools with 3.9k+ installs to maternal digital health and low-latency streaming infrastructure.
+            From open-source AI developer tools with 4k+ installs to maternal digital health and low-latency streaming infrastructure.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ export const openSourceProjects = [
     name: "CommitCraft Pro",
     repo: "symon9/symon9-commitcraft",
     url: "https://github.com/symon9/symon9-commitcraft",
-    metric: "3.9k+ Installs · VS Code & Open VSX",
+    metric: "4k+ Installs · VS Code & Open VSX",
     description:
       "Generate commit messages, branch names, and next-step suggestions from your Git diff using Gemini.",
     stars: "Published Extension",

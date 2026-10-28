@@ -170,7 +170,7 @@ export default function HeroSection() {
                           <span className="font-mono text-[11px] text-indigo-600 dark:text-indigo-400">LLM / Monaco / Electron</span>
                         </div>
                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                          VS Code Extension API, git diff AST analysis, CommitCraft Pro (3.9k+ installs), prompt engineering.
+                          VS Code Extension API, git diff AST analysis, CommitCraft Pro (4k+ installs), prompt engineering.
                         </p>
                       </div>
                     </div>
@@ -194,7 +194,7 @@ export default function HeroSection() {
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-xs font-semibold text-slate-900 dark:text-white">CommitCraft Pro</span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                          3.9k+ Installs
+                          4k+ Installs
                         </span>
                       </div>
                       <p className="text-xs text-slate-600 dark:text-slate-400">

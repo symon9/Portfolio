@@ -45,7 +45,7 @@ export default function AboutSection() {
             {/* Quick stats strip below portrait */}
             <div className="grid grid-cols-3 gap-3 w-full max-w-sm mt-6">
               <div className="p-3 rounded-xl bg-white dark:bg-surface-card border border-slate-200 dark:border-white/5 text-center shadow-sm dark:shadow-none">
-                <div className="text-lg font-bold text-slate-900 dark:text-white font-mono">3.9k+</div>
+                <div className="text-lg font-bold text-slate-900 dark:text-white font-mono">4k+</div>
                 <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono mt-0.5">CommitCraft Installs</div>
               </div>
               <div className="p-3 rounded-xl bg-white dark:bg-surface-card border border-slate-200 dark:border-white/5 text-center shadow-sm dark:shadow-none">
