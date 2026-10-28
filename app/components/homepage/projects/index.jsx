@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectsData } from "@/utils/data/projects-data";
 import { BsGithub } from "react-icons/bs";
-import { FiExternalLink, FiLayers, FiAlertCircle } from "react-icons/fi";
+import { FiExternalLink, FiLayers, FiAlertCircle, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const CATEGORIES = [
   { id: "all", label: "All Projects" },
@@ -132,32 +132,66 @@ export default function Projects() {
                             )}
 
                             {project.images && project.images.length > 1 && (
-                              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 p-1 rounded-full bg-white/90 dark:bg-[#0c0e17]/90 backdrop-blur-md border border-slate-300/80 dark:border-white/15 shadow-lg dark:shadow-2xl z-20">
-                                {project.images.map((img, idx) => {
-                                  const isCurrent = activeIdx === idx;
-                                  return (
-                                    <button
-                                      key={img}
-                                      type="button"
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setSelectedImages((prev) => ({ ...prev, [project.id]: idx }));
-                                      }}
-                                      className={`text-[11px] font-mono px-3 py-1 rounded-full transition-all flex items-center gap-1.5 ${
-                                        isCurrent
-                                          ? "bg-indigo-600 text-white font-semibold shadow-sm"
-                                          : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/70 dark:hover:bg-white/10"
-                                      }`}
-                                    >
-                                      <span
-                                        className={`w-1.5 h-1.5 rounded-full ${
-                                          isCurrent ? "bg-white animate-pulse" : "bg-slate-400 dark:bg-slate-500"
-                                        }`}
-                                      />
-                                      <span>Screen {idx + 1}</span>
-                                    </button>
-                                  );
-                                })}
+                              <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-1 rounded-full bg-slate-950/80 dark:bg-black/80 backdrop-blur-md border border-white/15 shadow-xl z-20 text-white">
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setSelectedImages((prev) => ({
+                                      ...prev,
+                                      [project.id]: (activeIdx - 1 + project.images.length) % project.images.length,
+                                    }));
+                                  }}
+                                  className="p-1 rounded-full hover:bg-white/15 text-slate-300 hover:text-white transition-colors"
+                                  aria-label="Previous screenshot"
+                                >
+                                  <FiChevronLeft size={13} />
+                                </button>
+
+                                <div className="flex items-center gap-1.5 px-1.5">
+                                  {project.images.map((img, idx) => {
+                                    const isCurrent = activeIdx === idx;
+                                    return (
+                                      <button
+                                        key={img}
+                                        type="button"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedImages((prev) => ({ ...prev, [project.id]: idx }));
+                                        }}
+                                        className="py-1 focus:outline-none flex items-center"
+                                        aria-label={`Screenshot ${idx + 1}`}
+                                      >
+                                        <span
+                                          className={`h-1.5 rounded-full transition-all duration-300 ${
+                                            isCurrent
+                                              ? "w-5 bg-indigo-500 shadow-sm"
+                                              : "w-1.5 bg-white/40 hover:bg-white/70"
+                                          }`}
+                                        />
+                                      </button>
+                                    );
+                                  })}
+                                </div>
+
+                                <span className="text-[10px] font-mono text-slate-300 px-1 select-none">
+                                  {activeIdx + 1}/{project.images.length}
+                                </span>
+
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setSelectedImages((prev) => ({
+                                      ...prev,
+                                      [project.id]: (activeIdx + 1) % project.images.length,
+                                    }));
+                                  }}
+                                  className="p-1 rounded-full hover:bg-white/15 text-slate-300 hover:text-white transition-colors"
+                                  aria-label="Next screenshot"
+                                >
+                                  <FiChevronRight size={13} />
+                                </button>
                               </div>
                             )}
                           </>
